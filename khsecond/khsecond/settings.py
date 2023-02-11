@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-nwtp+1=d#yqxocih0sl3+nm*5jev6udvy=1!ez_m&@u6d2f(i1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'second.apps.SecondConfig'
+    'khsecond.users.apps.UsersConfig'
 ]
+
+# User
+AUTH_USER_MODEL = 'khsecond.users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
